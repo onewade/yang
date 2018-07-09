@@ -1,0 +1,198 @@
+/* 初始化	*/
+
+
+/* 元素初始化，重置 */
+
+/* 1.所有元素内外边距初始化 */
+/* 主要元素包括：body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd,dt,li,put, */
+*{
+	margin:0;
+	padding:0;
+}
+
+/* 2.列表小圆点格式化 */
+ul,ol{
+	list-style: none;
+}
+
+/* 3. a下划线删除 */
+a{
+	text-decoration:none;
+}
+
+/* 4. 伪类 */
+.clearfix:before, .clearfix:after{
+	content: "";
+	display: table;
+}
+
+.clearfix:after{
+	clear: both;
+}
+
+.clearfix{
+	zoom:1;
+}
+
+/* 5.浮动 */
+.rf{
+	float:right;
+}
+
+.lf{
+	float:left;
+}
+
+/* 6.标题标签 */
+h1,h2,h3,h4,h5,h6{
+	font-size:100%;
+	font-weight:normal;
+}
+
+/* 7.input */
+input{
+	outline:none;
+	border:0;
+}
+
+body{
+	font-size: 12px;
+	color: #666666;
+}
+/* 1.login最外侧盒子设定 高29 背景颜色#f7f7f7 下边框1 */
+.login{
+	height: 29px;
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #dddddd;
+}
+/* 1.1 login内容部分设置 高20 宽1200 居中*/
+.loginbox{
+	height: 20px;
+	width: 1200px;
+	margin: 0 auto; 
+}
+.loginbox h3{
+	line-height: 29px;
+	float: left;
+
+}
+/* 1.12右侧我的订单设置 宽290 高29 居中 注意浮动 */
+.loginrg{
+	width: 290px;
+	height: 29px;
+	float: right;
+	line-height: 29px;
+}
+.inlogin{
+	float: left;
+}
+.unlogin{
+	float: left;
+	display: none;
+}
+/* 1.121已经登录设置 a颜色orange */
+.inlogin{
+	color: orange;
+}
+/* 1.122未登录设置 span左右间距 a 鼠标点击变颜色; */
+.unlogin span, .mylogin span{
+	margin:0 10px;
+}
+.unlogin a, .mylogin a{
+	color:blue;
+}
+
+.unlogin a:hover, .mylogin a:hover{
+	color:orange;
+}
+/* 2.search部分设置 宽默认 高90 */
+.search{
+	width: 90px;
+}
+
+/* 内部内容盒子设置 宽1200 高90 居中 背景颜色主要测试用*/
+.searchbox{
+	width: 1200px;
+	height: 90px;
+	margin: 0 auto;
+
+}
+
+/* 2.1左侧logo设置 位置 上29 左17 */
+.searchbox a{
+	margin-left: 17px;
+	margin-top: 29px;
+
+	/* 注：浮动或者转化行内块元素，一般浮动为主 */
+	/* display: inline-block; */
+	float: left;
+}
+
+/* 2.2搜索框设置 宽616 高38 边框 位置左120 上36 浮动 */
+.searchcar{
+	width: 616px;
+	height: 38px;
+	border:1px solid #37ab40;
+	margin-left: 120px;
+	margin-top: 36px;
+	/* 注：出问题找浮动 */
+	float: left;
+}
+/* 搜索框搜索栏设置 宽516 高38 居中 背景图 缩进40 */
+.searchcar .txt{
+	width: 516px;
+	height: 38px;
+	line-height: 38px;
+	background: url(images/search.png) no-repeat 12px 9px;
+	/* background: palevioletred; */
+	text-indent: 40px;
+}
+/* 搜索框搜索按钮设置 宽100 高39 背景颜色 字白 14 行高38居中 浮动*/
+.searchcar .sub{
+	width: 100px;
+	height: 39px;
+	background: #37ab40;
+	float: right;
+	font-size: 14px;
+	color: white;
+	line-height: 39px;
+}
+
+/* 2.3右侧购物车 宽200 高40 右浮动 位置上36 */
+.buy{
+	width: 200px;
+	height: 40px;
+	float: right;
+	margin-top: 36px;
+	/* background-color: red; */
+}
+/* 设置a 宽158 高38 居中 背景图 字14颜色 缩进56 */
+.buy a{
+	width: 158px;
+	height: 38px;
+	margin: auto;
+	border:1px solid #dddddd;
+	background:url(images/buycar.png) no-repeat 14px 10px;
+	/* 因为要给行内元素设置宽高 改变类型 */
+	/* display: inline-block; */
+	text-indent: 56px;
+	line-height: 38px;
+	float: left;
+	/* background: purple; */
+}
+/* 设置span 宽40 高40 背景颜色 字18 白 居中 */
+.buy span{
+	/* 因为要给行内元素设置宽高 改变类型 */
+	/* display: inline-block; */
+	width: 40px;
+	height: 40px;
+	background-color: orange;
+	font-size: 18px;
+	text-align: center;
+	color: white;
+	line-height: 40px;
+
+	/* float:right; */
+
+	float: right;
+}
